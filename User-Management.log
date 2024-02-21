@@ -1,0 +1,19 @@
+Startdatum und -zeit: 2024-02-20 20:23:45
+Benutzer: ["Test@Test.de","0";"Test1@Test.local","1"]
+
+https://Experte:Experte1234@10.10.129.100/jdev/sps/getuserlist2
+{"LL": { "control": "dev/sps/getuserlist2", "value": "[{\"name\":\"Experte\",\"uuid\":\"1c771fca-0066-3700-ffffd033685fa67b\",\"isAdmin\":true,\"userState\":0,\"representsControl\":false}}
+
+Neuer Loxone Benutzer: Test@Test.de mit Status: 0
+Neuer Loxone Benutzer: Test1@Test.local mit Status: 1
+
+Neuer Loxone Benutzer: Test@Test.de mit Status: 0
+{"LL": { "control": "dev/sps/addoredituser/{\"name\":\"Test@Test.de\",\"changePassword\":true,\"userState\":\"0\"}", "value": "{\"name\":\"Test@Test.de\",\"desc\":\"\",\"uuid\":\"1c79c35e-0341-6a06-ffff504f94a1585a\",\"userid\":\"\",\"firstName\":\"\",\"lastName\":\"\",\"email\":\"\",\"phone\":\"\",\"uniqueUserId\":\"\",\"company\":\"\",\"department\":\"\",\"personalno\":\"\",\"title\":\"\",\"debitor\":\"\",\"customField1\":\"\",\"customField2\":\"\",\"customField3\":\"\",\"customField4\":\"\",\"customField5\":\"\",\"lastEdit\":477745518,\"userState\":0,\"isAdmin\":false,\"changePassword\":true,\"masterAdmin\":false,\"userRights\":16416,\"scorePWD\":-1,\"scoreVisuPWD\":-1,\"trustMember\":\"\",\"usergroups\":[],\"nfcTags\":[],\"keycodes\":[],\"customFields\":[\"Benutzerdefiniertes Feld 1\",\"Benutzerdefiniertes Feld 2\",\"Benutzerdefiniertes Feld 3\",\"Benutzerdefiniertes Feld 4\",\"Benutzerdefiniertes Feld 5\"]}", "Code": "200"}}
+
+Neuer Loxone Benutzer: Test1@Test.local mit Status: 1
+{"LL": { "control": "dev/sps/addoredituser/{\"name\":\"Test1@Test.local\",\"changePassword\":true,\"userState\":\"1\"}", "value": "{\"name\":\"Test1@Test.local\",\"desc\":\"\",\"uuid\":\"1c79c35e-0367-6a08-ffff504f94a1585a\",\"userid\":\"\",\"firstName\":\"\",\"lastName\":\"\",\"email\":\"\",\"phone\":\"\",\"uniqueUserId\":\"\",\"company\":\"\",\"department\":\"\",\"personalno\":\"\",\"title\":\"\",\"debitor\":\"\",\"customField1\":\"\",\"customField2\":\"\",\"customField3\":\"\",\"customField4\":\"\",\"customField5\":\"\",\"lastEdit\":477745518,\"userState\":1,\"isAdmin\":false,\"changePassword\":true,\"masterAdmin\":false,\"userRights\":16416,\"scorePWD\":-1,\"scoreVisuPWD\":-1,\"trustMember\":\"\",\"usergroups\":[],\"nfcTags\":[],\"keycodes\":[],\"customFields\":[\"Benutzerdefiniertes Feld 1\",\"Benutzerdefiniertes Feld 2\",\"Benutzerdefiniertes Feld 3\",\"Benutzerdefiniertes Feld 4\",\"Benutzerdefiniertes Feld 5\"]}", "Code": "200"}}
+
+Status nderung f r Benutzer Test@Test.de zu 1 am 2024-02-21 13:28:14
+Status f r Benutzer Test@Test.de zu 1 ge ndert. Antwort: {"LL": { "control": "dev/sps/addoredituser/{\"name\":\"Test@Test.de\",\"uuid\":\"1c79c35e-0341-6a06-ffff504f94a1585a\",\"userState\":1}", "value": "{\"name\":\"Test@Test.de\",\"desc\":\"\",\"uuid\":\"1c79c35e-0341-6a06-ffff504f94a1585a\",\"userid\":\"\",\"firstName\":\"\",\"lastName\":\"\",\"email\":\"\",\"phone\":\"\",\"uniqueUserId\":\"\",\"company\":\"\",\"department\":\"\",\"personalno\":\"\",\"title\":\"\",\"debitor\":\"\",\"customField1\":\"\",\"customField2\":\"\",\"customField3\":\"\",\"customField4\":\"\",\"customField5\":\"\",\"lastEdit\":477750776,\"userState\":1,\"isAdmin\":false,\"changePassword\":true,\"masterAdmin\":false,\"userRights\":16416,\"scorePWD\":-1,\"scoreVisuPWD\":-1,\"trustMember\":\"\",\"usergroups\":[],\"nfcTags\":[],\"keycodes\":[],\"customFields\":[\"Benutzerdefiniertes Feld 1\",\"Benutzerdefiniertes Feld 2\",\"Benutzerdefiniertes Feld 3\",\"Benutzerdefiniertes Feld 4\",\"Benutzerdefiniertes Feld 5\"]}", "Code": "200"}}
+
+
