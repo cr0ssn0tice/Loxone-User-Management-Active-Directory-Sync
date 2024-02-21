@@ -1,0 +1,29 @@
+README für PowerShell-Skript zur Benutzerverwaltung zwischen Active Directory und Loxone
+Beschreibung
+Dieses PowerShell-Skript synchronisiert Benutzerinformationen zwischen einem Active Directory (AD) und einem Loxone Miniserver. Es liest Benutzerdaten aus dem AD, vergleicht diese mit den Benutzerdaten auf einem Loxone Miniserver und führt entsprechende Aktionen durch: Es aktualisiert den Status von Benutzern auf dem Loxone Miniserver und fügt neue Benutzer hinzu, falls diese im AD vorhanden, aber noch nicht auf dem Miniserver registriert sind. Alle Aktionen sowie etwaige Fehler werden in einer Log-Datei dokumentiert.
+
+Funktionsweise
+Initialisierung: Das Skript initialisiert Pfade für Log- und CSV-Dateien und prüft, ob der benötigte Ordner für die Dateiablage vorhanden ist.
+AD-Benutzerdaten-Export: Benutzerdaten werden aus dem AD exportiert und in einer CSV-Datei gespeichert.
+Loxone Benutzerdaten-Abfrage: Über einen HTTP GET Request werden die Benutzerdaten vom Loxone Miniserver abgefragt und ebenfalls in einer CSV-Datei gespeichert.
+Datenvergleich und Synchronisation:
+Das Skript vergleicht die Benutzerdaten aus dem AD mit denen auf dem Loxone Miniserver.
+Bei Statusunterschieden eines Benutzers wird der Status auf dem Loxone Miniserver über einen API-Aufruf aktualisiert.
+Nicht vorhandene Benutzer im Loxone Miniserver werden über einen weiteren API-Aufruf hinzugefügt.
+Logging: Alle Aktionen und Fehler werden in einer Log-Datei dokumentiert.
+Wiederholung: Die oben genannten Schritte werden in einem festgelegten Zeitintervall wiederholt.
+Prerequisites
+PowerShell: Die Ausführung dieses Skripts erfordert PowerShell auf einem Windows-System.
+Active Directory-Modul für PowerShell: Für den Export von AD-Benutzerdaten muss das Active Directory-Modul installiert sein.
+Dies kann in der Regel mit Install-WindowsFeature RSAT-AD-PowerShell auf einem Windows Server oder durch die Installation der Remote Server Administration Tools auf einem Windows Client erfolgen.
+Zugriff auf den Loxone Miniserver: Die Zugangsdaten (Benutzername und Passwort) für den Loxone Miniserver müssen bekannt sein und der Miniserver muss über das Netzwerk erreichbar sein.
+Berechtigungen: Das Skript muss mit Benutzerrechten ausgeführt werden, die ausreichend sind, um Benutzerdaten aus dem AD zu exportieren und Änderungen am Loxone Miniserver vorzunehmen.
+Anleitung zur Bedienung
+Anpassung der Skriptvariablen: Bearbeiten Sie die Variablen am Anfang des Skripts, um die Zugangsdaten für den Loxone Miniserver sowie die Pfade für die Log- und CSV-Dateien entsprechend Ihrer Umgebung anzupassen.
+Ausführung des Skripts:
+Öffnen Sie die PowerShell als Administrator.
+Navigieren Sie zum Speicherort des Skripts.
+Führen Sie das Skript aus mit: .\NameDesSkripts.ps1
+Überprüfung der Log-Datei: Kontrollieren Sie die Log-Datei auf mögliche Fehler oder Hinweise zu durchgeführten Aktionen.
+Hinweis
+Dieses Skript ist als Beispiel konzipiert und sollte in einer Testumgebung vor dem Einsatz in einer Produktionsumgebung gründlich getestet werden. Anpassungen an spezifische Anforderungen oder Konfigurationen können notwendig sein.
